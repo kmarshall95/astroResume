@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const posts = await Astro.glob('../pages/posts/*.md');
+
+---
+  <BaseLayout title="Home Page">
+    <h1>Push for it, Push forward, Push for IT</h1>
+    <img src="/images/happyface.png" alt="logo" />
+    <img src="/images/regularface.png" alt="logo" />
+    {posts.map(post => <li><a href={post.frontmatter.slug}>{post.frontmatter.title}</a></li>)}
+  </BaseLayout>
+  

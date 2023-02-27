@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const posts = await Astro.glob('../content/*.md');
+import Card from "../components/Card.jsx";
+
+
+---
+  <BaseLayout title="Home Page">
+    <div class="container">
+      <div class="row">
+        <h1>Push for it, Push forward, Push for IT</h1>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-9">
+          <p>Welcome to my web development portfolio!</p> 
+            <p>I am an experienced web developer with the confident in my ability to build, maintain, & deliver top-quality web development services to my clients and businesses of all sizes.</p>
+          <div class="row">
+            <div class="row py-3">
+              <div class="col-md-4 col-4">
+                <a class="btn btn-primary" href="">Code Pen</a>
+              </div>
+              <div class="col-md-4 col-4">
+                <a class="btn btn-primary" href="">My Work</a>
+              </div>
+              <div class="col-md-4 col-4">
+                <a class="btn btn-primary" href="">Case Studies</a>
+              </div>
+            </div>
+            <div class="row py-3">
+              <div class="col-md-4 col-4">
+                <a class="btn btn-primary" href="">My Github</a>
+              </div>
+              <div class="col-md-4 col-4">
+                <a class="btn btn-primary" href="">My LinkedIn</a>
+              </div>
+              <div class="col-md-4 col-4">
+                <a class="btn btn-primary" href="">StackBlitz</a>
+              </div>
+            </div>
+          </div>
+          <p> Are you searching for a skilled web developer you can count on to bring your ideas to reality? Look no further! I'd love to chat with you about bringing your project specifics to life with my skills and expertise. Let's make it happen!</p>
+        </div>
+        <div class="col-md-3">
+          <img src="/images/happyface.png" alt="logo" />
+          
+      </div>
+      <!-- <div class="row">
+        {posts.map(post => <li><a href={post.frontmatter.slug}>{post.frontmatter.title}</a></li>)}
+      </div> -->
+      </div>
+    </div>
+    <Card description="th"/>
+  </BaseLayout>
+  

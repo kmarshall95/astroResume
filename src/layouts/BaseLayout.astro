@@ -1,0 +1,33 @@
+---
+const { title='BBD' } = Astro.props
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import '../styles/styles.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type ="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content = {Astro.generator} >
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{title}</title>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <Header/>
+
+  <body class="p-0">
+    <div class="gradientChemicAqua">
+      <slot /> <!-- your content is injected here -->
+    </div>
+  </body>
+  <Footer/>
+</html>
+
+<script>
+  import 'bootstrap/dist/js/bootstrap.bundle.min';
+</script>

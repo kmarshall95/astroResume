@@ -1,0 +1,70 @@
+$gradientMorpheusDen: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+
+.gradientChemicAqua {
+  background-image: linear-gradient(-225deg, #77FFD2 0%, #6297DB 48%, #1EECFF 100%);
+  padding: 5% 15%;
+}
+
+
+
+
+  .logo img{
+    height: 9vh;
+    width: auto;
+  }
+
+ img{
+    width: 100%;
+    height: auto;
+ }
+
+
+  /* Main content */
+  body {
+    margin: 0 0 0 0; /* Add a top margin to avoid content overlay */
+  }
+
+  p{
+    font-size: 1.125em;
+    line-height: 1.25em;
+    padding: 0 0 .25em 0;
+  }
+
+h1,h2,h3,h4,h5,h6,p{
+    padding: 20px 0 0 0;
+}
+  
+
+  .btn {
+    width: 100%;
+  }
+
+  .btn:hover {
+    background-color: #3b0aef;
+    color: rgb(180, 179, 183);
+  }
+
+  .btn:focus {
+    background-color: #3b0aef;
+    color: rgb(180, 179, 183);
+  }
+
+  .nav-link{
+    color: #fff !important;
+    font-size: 1.3rem !important;
+    font-weight: 400 !important;
+
+  }
+
+  .navbar-toggler-icon{
+    color: #fff !important;
+  }
+
+  .navbar-toggler{
+    border-color: #fff !important;
+  }
+
+  .nav-link:hover{
+    color: #6297DB !important;
+    text-decoration: double underline;
+  }
