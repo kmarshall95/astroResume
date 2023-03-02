@@ -5,6 +5,8 @@ author:
 short: 
 thumbnail:
 mainImage:
+layout: '../layouts/BaseLayout.astro'
+
 ---
 # Customers and establishing credibility in your industry. 
 
