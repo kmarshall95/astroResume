@@ -1,5 +1,5 @@
 ---
-title: Blogs
+title: Web Development Home
 slug: webdev
 author:
 short: 

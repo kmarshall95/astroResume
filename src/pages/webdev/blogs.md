@@ -1,6 +1,6 @@
 ---
-title: Blogs
-slug: blogs
+title: Why a well-designed website is crucial for business success
+slug: webdev/blogs
 layout: '../../layouts/BaseLayout.astro'
 ---
 
