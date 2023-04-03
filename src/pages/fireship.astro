@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AnimtedThingy from "../components/animtedThingy.jsx";
+import Accordion from "../components/accordionSlider/accordion";
+import '../components/animtedThingy.css';
+
+---
+  <BaseLayout title="Home Page">
+    <AnimtedThingy client:only></AnimtedThingy>
+   <!-- Accordion.astro -->
+<div class="accordion">
+    <div class="accordion-header">
+      <h3 class="accordion-title">Accordion 1</h3>
+    </div>
+    <div class="accordion-content">
+      <p>Accordion 1 content goes here...</p>
+    </div>
+    <div class="accordion-header">
+      <h3 class="accordion-title">Accordion 2</h3>
+    </div>
+    <div class="accordion-content">
+      <p>Accordion 2 content goes here...</p>
+    </div>
+  </div>
+  
+  <script>
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    const accordionContents = document.querySelectorAll('.accordion-content');
+  
+    accordionHeaders.forEach((header, index) => {
+      header.addEventListener('click', () => {
+        const content = accordionContents[index];
+        const isOpen = content.style.maxHeight;
+  
+        content.style.maxHeight = isOpen ? null : `${content.scrollHeight}px`;
+      });
+    });
+  </script>
+  
+  </BaseLayout>
+  

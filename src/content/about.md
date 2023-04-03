@@ -4,22 +4,24 @@ slug: about
 ---
 <div className="container">
     <div class="row">
-        <div class="col-md-3">
-            <h1>About Me</h1>
-            <p align="center">
-                <img src="/images/regularface.png" alt="Kyle L Marshall" class="img-thumbnail">
-            </p>
-        </div>
-        <div class="col-md-9">
-            <h2>Hi, I'm Kyle</h2>
-            <p>I'm a full-stack developer with a passion for creating beautiful, functional, and accessible websites. I have a background in graphic design and marketing, which helps me to create websites that are both visually appealing and easy to use. I'm also a big fan of open source software and I'm always looking for new ways to contribute to the community.</p>
-        </div>
     </div>
     <div className="row">
-        <div className="col-md-6">
-            <p>I'm a full-stack developer with a passion for creating beautiful, functional, and accessible websites. I have a background in graphic design and marketing, which helps me to create websites that are both visually appealing and easy to use. I'm also a big fan of open source software and I'm always looking for new ways to contribute to the community.</p>
+        <div className="col-md-9">
+            <h1>The Architect Behind the Pixels: Meet Your Web Development Maestro</h1>
+            <p>I am a results-driven Senior Web Developer with a strong foundation in various programming languages and frameworks, passionate about delivering innovative and sustainable technological solutions. I hold a Bachelor's degree in Computer Information Systems from Frostburg State University and have extensive experience in both front-end and back-end development.</p>
+            <p>
+            With a diverse skill set that includes React.js, JavaScript, HTML5 & CSS3, PHP, SQL, Java, and Python, I have been able to contribute effectively to projects and teams, ensuring high-quality results. My expertise spans across numerous frameworks and libraries such as Gatsby, Redux, Astro, Drupal, WordPress CMS, Hugo, Jekyll, and Go.</p>
+            <p>
+            Throughout my professional journey, I have worked on various projects, including developing 508 compliant websites, creating reusable components, managing live sites, and handling version control with Git and GitLab Actions. I have successfully launched multiple Drupal websites, performed platform migrations, and managed AWS EC2 instances.
+            As a freelance developer, I have led web development projects, designed and built custom solutions, and provided SEO/SMO services for clients. I am eager to learn new technologies and contribute to the success of progressive companies.</p>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-3">
+            <div>
+                <h1>About Me</h1>
+                <p align="center">
+                    <img src="/images/regularface.png" alt="Kyle L Marshall" class="img-thumbnail">
+                </p>
+            </div>
             <h2>My Resume</h2>
             <p>Here's a link to my resume. Feel free to download it and get in touch if you'd like to learn more about my work.</p>
             <a href="/resume.pdf" className="btn btn-primary">Download Resume</a>

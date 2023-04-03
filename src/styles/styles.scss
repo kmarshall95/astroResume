@@ -2,7 +2,6 @@ $gradientMorpheusDen: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 
 .gradientChemicAqua {
   background-image: linear-gradient(-225deg, #77FFD2 0%, #6297DB 48%, #1EECFF 100%);
-  padding: 5% 15%;
 }
 
 
@@ -67,4 +66,43 @@ h1,h2,h3,h4,h5,h6,p{
   .nav-link:hover{
     color: #6297DB !important;
     text-decoration: double underline;
+  }
+
+  .container {
+    background-image: linear-gradient(225deg, #77FFD2 0%, #6297DB 48%, #1EECFF 100%);
+  }
+
+  .hero{
+    background-image: url("/images/Techshipfortechan.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .cardX {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: .25rem;
+    padding: .5rem;
+    transform: translateX(100px);
+    opacity: 0;
+    transition: 150ms;
+  }
+
+  .cardX.show
+  {
+    transform: translateX(0);
+    opacity: 1;
   }

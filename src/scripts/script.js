@@ -1,10 +1,32 @@
+const cards = document.querySelectorAll(".cardX");
 
-  /* Toggle between adding and removing the "responsive" class to navbar when the user clicks on the icon */
-function myFunction() {
-  var x = document.getElementById("TopNavbar");
-  if (x.class === "navbar") {
-    x.class += " responsive";
-  } else {
-    x.class = "navbar";
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry =>{
+    entry.target.classList.toggle("show", entry.isIntersecting)
+    // if(entry.isIntersecting) observer.unobserve(entry.target)
+  })
+},{threshold: 1,})
+
+const lastCardObserver = new IntersectionObserver(entries => {
+  const lastCard = entries[0]
+  if(!lastCard.isIntersecting) return loadNewCards()
+  lastCardObserver.unobserve(lastCard.target) 
+  lastCardObserver.observe(document.querySelector(".cardX:last-child"))
+
+}, {})
+
+lastCardObserver.observe(document.querySelector(".cardX:last-child"))
+
+cards.forEach(card => {
+  observer.observe(card)
+})
+
+function loadNewCards(){
+  for (let i = 0; i < 10; i++) {
+    const card = document.createElement("div")
+    card.textContent = "Card"
+    card.classList.add("cardX")
+    observer.observe(card)
+    cardContainer.append(card)
   }
 }

@@ -1,6 +1,6 @@
 ---
 title: Why a well-designed website is crucial for business success
-slug: webdev/blogs
+slug: webdev/Why a well-designed website is crucial for business success
 layout: '../../layouts/BaseLayout.astro'
 ---
 
