@@ -1,124 +1,91 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const posts = await Astro.glob("../content/*.md");
-import Card from "../components/Card.jsx";
 ---
 
-<BaseLayout title="Home Page">
-  <div class="hero">
-    <h1>Push for it, Push forward, Push for IT</h1>
-  </div>
-  <div class="container px-0">
-    <div class="row">
-      <h2>Welcome to my web development portfolio!</h2>
-      <h3>Hi, I'm Kyle</h3>
-            <p>Introducing the maestro of web development, where human creativity meets cutting-edge technology. I bring a unique fusion of graphic design and marketing expertise to deliver visually stunning and user-friendly websites that leave a lasting impression. With an unwavering passion for open-source software, I am committed to contributing to the community and staying ahead in the ever-evolving digital landscape.</p>
-
-            <p> Explore my portfolio and experience the synergy of creativity, functionality, and accessibility that elevates your digital projects to new heights. Join forces with a winning team and let's conquer the online world together.
-              </p>
-    </div>
-
-    <div class="row">
-      <div class="col-md-9">
-        <p>
-          I am an experienced web developer with the confident in my ability to
-          build, maintain, & deliver top-quality web development services to my
-          clients and businesses of all sizes.
-        </p>
-        <div class="row">
-          <div class="row py-3">
-            <div class="col-md-4 col-4">
-              <a class="btn btn-primary" href="">Code Pen</a>
-            </div>
-            <div class="col-md-4 col-4">
-              <a class="btn btn-primary" href="">My Work</a>
-            </div>
-            <div class="col-md-4 col-4">
-              <a class="btn btn-primary" href="/webdev">Case Studies</a>
-            </div>
-          </div>
-          <div class="row py-3">
-            <div class="col-md-4 col-4">
-              <a class="btn btn-primary" href="">My Github</a>
-            </div>
-            <div class="col-md-4 col-4">
-              <a class="btn btn-primary" href="">My LinkedIn</a>
-            </div>
-            <div class="col-md-4 col-4">
-              <a class="btn btn-primary" href="">StackBlitz</a>
-            </div>
-          </div>
-        </div>
-        <p>
-          Are you searching for a skilled web developer you can count on to
-          bring your ideas to reality? Look no further! I'd love to chat with
-          you about bringing your project specifics to life with my skills and
-          expertise. Let's make it happen!
-        </p>
-      </div>
-      <div class="col-md-3">
-        <img src="/images/happyface.png" alt="logo" />
-      </div>
-      <!-- <div class="row">
-        {posts.map(post => <li><a href={post.frontmatter.slug}>{post.frontmatter.title}</a></li>)}
-      </div> -->
-    </div>
-
-    <div class="row">
-      <div class="row">
-        <Card
-          description="cause I wont stop now"
-          bodyText="You can hate now"
-          link="/"
-          postPic="https://www.bluebrothersdesigns.com/wp-content/uploads/2021/12/cropped-Asset-1@1.png"
-        />
-        <Card
-          description="cause I wont stop now"
-          bodyText="You can hate now"
-          link="/"
-          postPic="https://www.bluebrothersdesigns.com/wp-content/uploads/2021/12/cropped-Asset-1@1.png"
-        />
-        <Card
-          description="cause I wont stop now"
-          bodyText="You can hate now"
-          link="/"
-          postPic="https://www.bluebrothersdesigns.com/wp-content/uploads/2021/12/cropped-Asset-1@1.png"
-        />
-      </div>
-      <div class="row">
-        <Card
-          description="cause I wont stop now"
-          bodyText="You can hate now"
-          link="/"
-          postPic="https://www.bluebrothersdesigns.com/wp-content/uploads/2021/12/cropped-Asset-1@1.png"
-        />
-        <Card
-          description="cause I wont stop now"
-          bodyText="You can hate now"
-          link="/"
-          postPic="https://www.bluebrothersdesigns.com/wp-content/uploads/2021/12/cropped-Asset-1@1.png"
-        />
-        <Card
-          description="cause I wont stop now"
-          bodyText="You can hate now"
-          link="/"
-          postPic="https://www.bluebrothersdesigns.com/wp-content/uploads/2021/12/cropped-Asset-1@1.png"
-        />
-      </div>
-      <div class="row">
-        <div class="card-container">
-          <div class="cardX show">This is a card</div>
-          <div class="cardX">This is also a card</div>
-          <div class="cardX">Card Third Sr</div>
-          <div class="cardX">CatDog</div>
-          <div class="cardX">Hog Rider</div>
-          <div class="cardX">Drunken King</div>
-          <div class="cardX">CyberBear</div>
-          <div class="cardX">The Head</div>
+<BaseLayout title="Kyle Marshall | Software Engineer & Digital Builder">
+  <main class="home-page">
+    <section class="home-hero shell">
+      <div class="hero-copy">
+        <span class="eyebrow">SOFTWARE ENGINEER · WEB MODERNIZATION · PRODUCT R&D</span>
+        <h1>I build systems that turn messy work into something people can actually use.</h1>
+        <p>I'm Kyle Marshall. My work spans large-scale web modernization, Astro and React development, internal tooling, WordPress platforms, creative productivity apps, and an Unreal Engine game pipeline.</p>
+        <div class="hero-actions">
+          <a class="primary" href="/project-library">Explore my Project Library</a>
+          <a class="secondary" href="/webdev">View case studies →</a>
         </div>
       </div>
-    </div>
-  </div>
+      <div class="hero-orbit" aria-hidden="true">
+        <div class="orbit-core">KM</div>
+        <span class="orbit-item item-a">ASTRO</span>
+        <span class="orbit-item item-b">REACT</span>
+        <span class="orbit-item item-c">NODE</span>
+        <span class="orbit-item item-d">UNREAL</span>
+        <span class="orbit-item item-e">WP</span>
+      </div>
+    </section>
+
+    <section class="shell focus-strip">
+      <article><span>01</span><b>Modernize</b><p>Replace brittle legacy experiences without losing the systems behind them.</p></article>
+      <article><span>02</span><b>Build</b><p>Turn ideas into usable browser products, tools, and platform capabilities.</p></article>
+      <article><span>03</span><b>Systematize</b><p>Create pipelines, shared schemas, automation, and documentation that make the next iteration easier.</p></article>
+      <article><span>04</span><b>Experiment</b><p>Use game development, 3D workflows, AI, and interaction design to push outside normal web work.</p></article>
+    </section>
+
+    <section class="shell library-feature">
+      <div class="feature-copy">
+        <span class="eyebrow">NEW · PROJECT LIBRARY</span>
+        <h2>The portfolio now has a front door for everything I build.</h2>
+        <p>Apps, websites, plugins, repositories, ZIP packages, PDFs, game-development work, and the missing steps between a prototype and a maintained product.</p>
+        <p>The library is designed around projects first. Each project can own its code, screenshots, documentation, packages, status, blockers, launch state, and next action.</p>
+        <div class="feature-actions">
+          <a class="primary" href="/project-library">Open Project Library</a>
+          <a class="secondary" href="/next-steps">Read the mega roadmap →</a>
+        </div>
+      </div>
+      <a class="feature-image" href="/project-library" aria-label="Open Kyle's Project Library">
+        <img src="/images/project-library-dashboard.svg" alt="Kyle's Project Library dashboard showing apps, websites, plugins, repositories, ZIP packages, PDFs and missing insights" loading="lazy" />
+        <span>Explore the full system →</span>
+      </a>
+    </section>
+
+    <section class="shell current-work">
+      <div class="section-head">
+        <div><span class="eyebrow">CURRENT WORK</span><h2>Different mediums. The same engineering instinct.</h2></div>
+        <p>I keep coming back to the same problem: reduce context loss, make state visible, and build tools that help work continue instead of restart.</p>
+      </div>
+      <div class="work-grid">
+        <article class="work-card featured">
+          <span>Product System</span>
+          <h3>BrainstormingApp + Project Library + PostLaunchApp</h3>
+          <p>A connected workflow for idea formation, project state, launch readiness, and post-launch operations—separate products sharing a common project language.</p>
+          <a href="/project-library">See the system →</a>
+        </article>
+        <article class="work-card">
+          <span>Game Development</span>
+          <h3>DA SIX</h3>
+          <p>A third-person action project combining fighting-game decision speed, character-action combat, exploration, six heroes, and a Meshy-to-Unreal content pipeline.</p>
+          <a href="/next-steps">See what comes next →</a>
+        </article>
+        <article class="work-card">
+          <span>Modernization</span>
+          <h3>NASA Heliophysics</h3>
+          <p>Legacy web modernization using Astro, MD/MDX, Node utilities, design-system work, accessibility, Git-based content, and deployment on Linux infrastructure.</p>
+          <a href="/webdev">View web work →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell roadmap-callout">
+      <div>
+        <span class="eyebrow">NEXT STEPS</span>
+        <h2>More ideas are not the goal. Better continuity is.</h2>
+        <p>The next phase is about finishing stronger projects, automating proof, linking artifacts, hardening the game pipeline, and turning the portfolio into evidence of how I think—not just screenshots of what I made.</p>
+      </div>
+      <a class="primary" href="/next-steps">Open the full roadmap →</a>
+    </section>
+  </main>
 </BaseLayout>
 
-<script src="../scripts/script.js"></script>
+<style>
+  :global(body){background:#06101f;color:#dbe7f8}.home-page{background:radial-gradient(circle at 72% 0%,#1b3f6d 0,transparent 30%),#06101f;min-height:100vh}.shell{width:min(1160px,calc(100% - 2rem));margin:0 auto}.eyebrow{display:inline-block;color:#7daeff;font-size:.78rem;font-weight:850;letter-spacing:.16em;margin-bottom:1rem}.home-hero{min-height:78vh;display:grid;grid-template-columns:1.25fr .75fr;gap:4rem;align-items:center;padding:5rem 0}.home-hero h1,.library-feature h2,.section-head h2,.roadmap-callout h2{color:white;letter-spacing:-.05em;margin:0}.home-hero h1{font-size:clamp(3.3rem,7vw,6.8rem);line-height:.91}.home-hero p{font-size:1.2rem;line-height:1.7;color:#a8b9cf;max-width:760px}.hero-actions,.feature-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}.primary,.secondary{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:.9rem 1.25rem;border-radius:999px;font-weight:800}.primary{background:#3478f6;color:white}.secondary{border:1px solid #36526f;color:#dbe7f8}.hero-orbit{width:min(390px,75vw);aspect-ratio:1;border:1px solid #31577f;border-radius:50%;position:relative;margin:auto;box-shadow:inset 0 0 90px rgba(52,120,246,.1)}.hero-orbit:before,.hero-orbit:after{content:"";position:absolute;border:1px solid #203c5c;border-radius:50%;inset:12%}.hero-orbit:after{inset:28%}.orbit-core{position:absolute;inset:50% auto auto 50%;transform:translate(-50%,-50%);width:108px;height:108px;border-radius:30px;display:grid;place-items:center;background:linear-gradient(135deg,#3478f6,#7a5cff);font-size:2.4rem;font-weight:900;color:white}.orbit-item{position:absolute;background:#0d213a;border:1px solid #315173;color:#a9c7ec;border-radius:999px;padding:.45rem .7rem;font-size:.68rem;font-weight:850;letter-spacing:.12em}.item-a{top:7%;left:42%}.item-b{top:29%;right:-3%}.item-c{bottom:9%;right:25%}.item-d{bottom:20%;left:-4%}.item-e{top:27%;left:0}.focus-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#20354f;border:1px solid #20354f;border-radius:22px;overflow:hidden}.focus-strip article{background:#0b1b30;padding:1.4rem}.focus-strip span{color:#54769d;font-weight:900}.focus-strip b{display:block;color:white;font-size:1.2rem;margin-top:.5rem}.focus-strip p{padding:0;color:#8fa5bf;font-size:.92rem;line-height:1.55}.library-feature{display:grid;grid-template-columns:.8fr 1.2fr;gap:3rem;align-items:center;padding:7rem 0}.library-feature h2,.section-head h2,.roadmap-callout h2{font-size:clamp(2.3rem,4.5vw,4.3rem);line-height:.98}.library-feature p,.section-head p,.roadmap-callout p{color:#9db0c8;line-height:1.7}.feature-image{display:block;position:relative;text-decoration:none;border-radius:24px;overflow:hidden;border:1px solid #304967;background:#0c1d33;box-shadow:0 35px 90px rgba(0,0,0,.35);transform:rotate(1deg);transition:.25s ease}.feature-image:hover{transform:rotate(0) translateY(-5px)}.feature-image img{display:block;width:100%;height:auto}.feature-image span{position:absolute;right:1rem;bottom:1rem;background:rgba(6,16,31,.88);border:1px solid rgba(255,255,255,.15);color:white;padding:.7rem 1rem;border-radius:999px;font-weight:800;backdrop-filter:blur(10px)}.current-work{padding:2rem 0 7rem}.section-head{display:flex;justify-content:space-between;gap:3rem;align-items:end;margin-bottom:2rem}.section-head p{max-width:520px}.work-grid{display:grid;grid-template-columns:1.35fr .825fr .825fr;gap:1rem}.work-card{background:#0b1c31;border:1px solid #223c5b;border-radius:24px;padding:1.6rem;min-height:330px;display:flex;flex-direction:column}.work-card.featured{background:linear-gradient(145deg,#102d54,#0b1c31);border-color:#315b8d}.work-card>span{color:#7daeff;font-size:.75rem;font-weight:850;text-transform:uppercase;letter-spacing:.12em}.work-card h3{color:white;font-size:1.7rem;line-height:1.08;margin:1rem 0}.work-card p{padding:0;color:#97abc3;line-height:1.65}.work-card a{color:#80b0ff;font-weight:800;text-decoration:none;margin-top:auto}.roadmap-callout{display:flex;align-items:end;justify-content:space-between;gap:3rem;padding:4rem;border:1px solid #2b4a70;border-radius:30px;background:linear-gradient(135deg,#102e55,#0a1a30);margin-bottom:5rem}.roadmap-callout>div{max-width:760px}@media(max-width:900px){.home-hero,.library-feature{grid-template-columns:1fr}.hero-orbit{display:none}.focus-strip,.work-grid{grid-template-columns:1fr 1fr}.section-head,.roadmap-callout{display:block}.roadmap-callout .primary{margin-top:1rem}}@media(max-width:600px){.focus-strip,.work-grid{grid-template-columns:1fr}.home-hero{min-height:auto;padding:4rem 0}.library-feature{padding:5rem 0}.roadmap-callout{padding:2rem}.feature-image{transform:none}}
+</style>

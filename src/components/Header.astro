@@ -1,24 +1,45 @@
-<nav class="navbar navbar-expand-lg bg-dark">
-  <div class="container-fluid">
-    <a href="/" class="logo">
-      <img src="/logo-white.png" alt="" class="d-inline-block align-text-top">
-    </a>   
+<nav class="navbar navbar-expand-lg navbar-dark portfolio-nav">
+  <div class="container-fluid px-3 px-lg-5">
+    <a href="/" class="logo" aria-label="Kyle Marshall home">
+      <img src="/logo-white.png" alt="Kyle Marshall" class="d-inline-block align-text-top" />
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav navbar-nav me-auto mb-2 mb-lg-0">
-        <a class="nav-link active" aria-current="page" href="/">Home</a>
-        <a class="nav-link" href="/about">About</a>
-        <a class="nav-link" href="/work">Work</a>
+      <div class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/webdev">Work</a>
+        <a class="nav-link" href="/project-library">Project Library</a>
+        <a class="nav-link" href="/next-steps">Next Steps</a>
         <a class="nav-link" href="/blog">Blog</a>
         <a class="nav-link" href="/contact">Contact</a>
-        <a class="nav-link disabled">Disabled</a>
       </div>
     </div>
   </div>
-    
-
 </nav>
 
-  
+<style>
+  .portfolio-nav {
+    background: rgba(7, 18, 39, 0.96);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(18px);
+  }
+  .portfolio-nav .nav-link {
+    color: rgba(255,255,255,.78) !important;
+    font-size: .98rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+  }
+  .portfolio-nav .nav-link:hover {
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+  .portfolio-nav .logo img {
+    height: 48px;
+    width: auto;
+  }
+</style>

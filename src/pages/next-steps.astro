@@ -1,0 +1,232 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const phases = [
+  {
+    number: "01",
+    title: "Make the portfolio tell one story",
+    window: "Now",
+    goal: "Turn the portfolio from a collection of pages into a clear map of the systems I build and the problems I solve.",
+    actions: [
+      "Use Project Library as the canonical entry point for products, repos, PDFs, ZIPs, screenshots and case studies.",
+      "Create one project record per meaningful build instead of scattering the same project across unrelated pages.",
+      "Replace placeholder work with current product, NASA modernization, BBD, AstroFlow and DA SIX evidence.",
+      "Add a short Now / Next / Later status to every major project."
+    ]
+  },
+  {
+    number: "02",
+    title: "Create the shared project schema",
+    window: "Foundation",
+    goal: "Give every app the same language for project identity, status, artifacts, ownership and next actions.",
+    actions: [
+      "Create a projects.json or equivalent data source with id, name, type, status, repo, demo, PDFs, ZIPs, screenshots and relationships.",
+      "Track last touched, current blocker, next action and the next three concrete actions.",
+      "Model relationships such as uses, blocked by, generated from, supersedes and monitored by.",
+      "Keep public portfolio fields separate from private operating data."
+    ]
+  },
+  {
+    number: "03",
+    title: "Automate the evidence",
+    window: "Build",
+    goal: "Stop manually proving that a project exists, runs and is documented.",
+    actions: [
+      "Ingest GitHub metadata, releases and recent activity into the Project Library.",
+      "Generate desktop, tablet and mobile screenshots for runnable web projects.",
+      "Track README, demo, tests, deployment, monitoring, PDF/docs, package and maintenance-plan completeness.",
+      "Generate a machine-readable Agent Context Pack for each project so coding agents do not reconstruct history every session."
+    ]
+  },
+  {
+    number: "04",
+    title: "Connect idea → build → launch → operate",
+    window: "System",
+    goal: "Let the apps I am building become one workflow without collapsing them into one giant application.",
+    actions: [
+      "BrainstormingApp creates or promotes an idea into a project record.",
+      "Project Library owns the repo, docs, packages, screenshots, blockers and milestones.",
+      "PostLaunchApp converts launch requirements into live operational checks.",
+      "Keep the products separate at the UI level while sharing schema, IDs and artifact relationships."
+    ]
+  },
+  {
+    number: "05",
+    title: "Productize the strongest tools",
+    window: "Products",
+    goal: "Move from interesting prototypes to a few tools that have a clear user, repeat usage and a reason to exist.",
+    actions: [
+      "BrainstormingApp: saved boards, multi-select, semantic ribbons, minimap, search, reusable groups and export.",
+      "PostLaunchApp: real HTTP/SSL/DNS checks, synthetic monitoring, incidents, ownership, notifications and deployment history.",
+      "PDF Reader: cross-document search, action extraction, citations, reminders, document diffing and project conversion.",
+      "Smart Image Slicer: robust segmentation, batch mode, sprite export, naming rules and game-engine manifests."
+    ]
+  },
+  {
+    number: "06",
+    title: "Turn DA SIX into a repeatable production pipeline",
+    window: "Game",
+    goal: "Prove the game through a vertical slice while making the character and content pipeline less fragile every time I use it.",
+    actions: [
+      "Finish the Brilliant Neptune vertical slice around responsive movement, melee feel, readable enemies and one polished arena.",
+      "Treat Dr. Birds duplicates as non-canon test mobs while the combat architecture is validated.",
+      "Harden Meshy → Blender → animation → Unreal QA with rig validation, pose correction, naming and import reports.",
+      "Build a canon and asset-health layer so characters, moves, images, PDFs, 3D models and gameplay rules stay synchronized."
+    ]
+  },
+  {
+    number: "07",
+    title: "Turn work into career-grade proof",
+    window: "Proof",
+    goal: "Show engineering judgment, modernization depth and product thinking—not just finished screens.",
+    actions: [
+      "Publish case studies that explain the problem, constraints, architecture, migration strategy and measured outcome.",
+      "Use NASA modernization to demonstrate legacy integration, Astro/MDX, Node tooling, CI/CD, accessibility and Linux deployment work.",
+      "Use the new apps to demonstrate product architecture, persistence, monitoring, local-first thinking and system design.",
+      "Use DA SIX and the asset pipeline to show technical creativity beyond traditional web development."
+    ]
+  },
+  {
+    number: "08",
+    title: "Ship less, finish more",
+    window: "Operating Rule",
+    goal: "Protect the best projects from being buried by the next idea.",
+    actions: [
+      "A new project must have a purpose, user, status, owner, repo or artifact location and next action.",
+      "Every active project needs a definition of done for the current phase.",
+      "Archive experiments that no longer deserve active attention instead of carrying them indefinitely.",
+      "Use the Missing Artifact Engine to decide what to finish next instead of relying on memory."
+    ]
+  }
+];
+
+const priorities = [
+  { label: "P0", title: "Project Library data model", detail: "The dependency for almost everything else on this page." },
+  { label: "P0", title: "Portfolio project navigation", detail: "Make the current work easy to discover in one or two clicks." },
+  { label: "P1", title: "GitHub + screenshot ingestion", detail: "Replace static inventory with live evidence." },
+  { label: "P1", title: "BrainstormingApp persistence", detail: "Turn the prototype into something usable every day." },
+  { label: "P1", title: "PostLaunch real monitors", detail: "Make launch tracking operational instead of checklist-only." },
+  { label: "P1", title: "DA SIX vertical slice", detail: "Answer whether Brilliant Neptune is fun enough to justify scaling production." },
+  { label: "P2", title: "PDF Reader knowledge layer", detail: "Link documents, actions and project context instead of treating PDFs as static files." },
+  { label: "P2", title: "Packaging + release discipline", detail: "Versioned ZIPs, READMEs, demos, checksums and release notes." }
+];
+---
+
+<BaseLayout title="Next Steps | Kyle Marshall">
+  <main class="roadmap-page">
+    <section class="roadmap-hero shell">
+      <span class="eyebrow">NEXT STEPS / 2026–2027</span>
+      <h1>From a pile of good projects to a system that compounds.</h1>
+      <p class="hero-copy">The next phase is not “make more things.” It is to connect the things I already build, finish the strongest ideas, automate the boring evidence, and make every project easier to understand, continue, ship and maintain.</p>
+      <div class="hero-links">
+        <a href="/project-library" class="primary">Open Project Library</a>
+        <a href="#priorities" class="secondary">See immediate priorities ↓</a>
+      </div>
+    </section>
+
+    <section class="shell thesis">
+      <div class="thesis-number">01</div>
+      <div>
+        <span class="eyebrow">THE CORE IDEA</span>
+        <h2>My projects are becoming one creative engineering system.</h2>
+        <p>BrainstormingApp handles ideas and relationships. The Project Library becomes the source of truth. Repositories contain implementation. PDFs carry plans and knowledge. Packages represent releases. PostLaunchApp handles operational reality. DA SIX stress-tests the same thinking in a completely different medium.</p>
+        <p>The useful connection is not that these should become one app. The useful connection is that they can share project identity, state, artifacts, dependencies and history.</p>
+      </div>
+    </section>
+
+    <section id="priorities" class="shell priority-section">
+      <div class="section-head">
+        <div><span class="eyebrow">DO THESE FIRST</span><h2>Immediate priorities</h2></div>
+        <p>These are ordered by leverage. Several attractive features should wait until the underlying project model exists.</p>
+      </div>
+      <div class="priority-grid">
+        {priorities.map((item) => (
+          <article>
+            <span>{item.label}</span>
+            <h3>{item.title}</h3>
+            <p>{item.detail}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="shell roadmap-section">
+      <div class="section-head">
+        <div><span class="eyebrow">MEGA ROADMAP</span><h2>The sequence</h2></div>
+        <p>Each phase exists to remove a specific form of friction: discovery, context loss, proof, launch risk, unfinished prototypes, game-production fragility, or weak presentation.</p>
+      </div>
+      <div class="timeline">
+        {phases.map((phase) => (
+          <article class="phase-card">
+            <aside>
+              <span class="phase-number">{phase.number}</span>
+              <span class="phase-window">{phase.window}</span>
+            </aside>
+            <div class="phase-content">
+              <h3>{phase.title}</h3>
+              <p class="goal">{phase.goal}</p>
+              <ul>
+                {phase.actions.map((action) => <li>{action}</li>)}
+              </ul>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="shell architecture">
+      <div class="section-head">
+        <div><span class="eyebrow">TARGET ARCHITECTURE</span><h2>Keep the apps separate. Share the truth.</h2></div>
+      </div>
+      <div class="architecture-flow">
+        <div class="flow-node"><b>Brainstorm</b><span>Ideas, references, connections</span></div>
+        <i>→</i>
+        <div class="flow-node accent"><b>Project Registry</b><span>ID, state, owner, artifacts, dependencies</span></div>
+        <i>→</i>
+        <div class="flow-stack">
+          <div class="flow-node"><b>GitHub</b><span>Code + activity</span></div>
+          <div class="flow-node"><b>PDF / Docs</b><span>Plans + knowledge</span></div>
+          <div class="flow-node"><b>Packages</b><span>Versioned outputs</span></div>
+        </div>
+        <i>→</i>
+        <div class="flow-node"><b>PostLaunch</b><span>Deploy, monitor, maintain</span></div>
+      </div>
+    </section>
+
+    <section class="shell decision-section">
+      <div>
+        <span class="eyebrow">WHAT I SHOULD NOT DO</span>
+        <h2>More projects are not automatically more progress.</h2>
+      </div>
+      <div class="decision-grid">
+        <article><b>Do not merge every app.</b><p>Shared schemas and integrations create leverage without creating one impossible codebase.</p></article>
+        <article><b>Do not expose the internal library unchanged.</b><p>The public portfolio should curate proof. The private operating view can track blockers, unfinished ZIPs, internal docs and maintenance state.</p></article>
+        <article><b>Do not polish before proving the loop.</b><p>For DA SIX, feel comes before roster scale. For apps, repeated usefulness comes before feature count.</p></article>
+        <article><b>Do not let PDFs become dead output.</b><p>A document should link to a project, actions, decisions, current version and the artifact that supersedes it.</p></article>
+      </div>
+    </section>
+
+    <section class="shell success-section">
+      <span class="eyebrow">WHAT “WORKING” LOOKS LIKE</span>
+      <h2>By the end of this phase, I should be able to answer five questions instantly.</h2>
+      <ol>
+        <li><span>01</span><div><b>What am I actively building?</b><p>Without searching through chats, folders, GitHub tabs or old PDFs.</p></div></li>
+        <li><span>02</span><div><b>What is the next concrete action?</b><p>Not a vague aspiration—a task that can actually be completed.</p></div></li>
+        <li><span>03</span><div><b>What proof exists?</b><p>Repo, runnable demo, screenshot, package, document, case study and deployment state.</p></div></li>
+        <li><span>04</span><div><b>What is blocking the project?</b><p>Technical dependency, missing asset, unclear decision, packaging work or launch requirement.</p></div></li>
+        <li><span>05</span><div><b>What deserves attention next?</b><p>Based on leverage, missing artifacts, active goals and whether the current phase is actually complete.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="shell closing">
+      <span class="eyebrow">THE OPERATING PRINCIPLE</span>
+      <h2>Build so the next version of me can understand what the last version was doing.</h2>
+      <p>That is the real point of the Project Library, the documents, the launch system, and the context packs: continuity. Better continuity means less reconstruction, faster iteration, cleaner handoffs, and more finished work.</p>
+      <a href="/project-library" class="primary">Return to Project Library →</a>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  :global(body){background:#06101f;color:#dce8f8}.roadmap-page{background:radial-gradient(circle at 75% -5%,#254d7d 0,transparent 29%),#06101f;min-height:100vh;padding:5rem 0}.shell{width:min(1120px,calc(100% - 2rem));margin:0 auto}.eyebrow{display:inline-block;color:#7dacff;font-size:.78rem;font-weight:800;letter-spacing:.16em;margin-bottom:1rem}.roadmap-hero{padding:4rem 0 6rem}.roadmap-hero h1,.thesis h2,.section-head h2,.decision-section h2,.success-section h2,.closing h2{color:#fff;letter-spacing:-.045em;margin:0}.roadmap-hero h1{font-size:clamp(3.2rem,7.5vw,7rem);line-height:.9;max-width:1000px}.hero-copy{font-size:1.22rem;line-height:1.7;max-width:760px;color:#a8b9ce;margin-top:2rem}.hero-links{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}.primary,.secondary{display:inline-flex;padding:.9rem 1.2rem;border-radius:999px;text-decoration:none;font-weight:800}.primary{background:#3478f6;color:white}.secondary{border:1px solid #36506e;color:#dce8f8}.thesis{display:grid;grid-template-columns:160px 1fr;gap:3rem;padding:4rem 0;border-top:1px solid #1d3451;border-bottom:1px solid #1d3451}.thesis-number{font-size:5rem;font-weight:900;color:#17345b;line-height:1}.thesis h2,.section-head h2,.decision-section h2,.success-section h2,.closing h2{font-size:clamp(2.2rem,4.5vw,4.2rem);line-height:1}.thesis p,.section-head p,.decision-grid p,.success-section p,.closing p{color:#9cb0c8;line-height:1.7}.priority-section,.roadmap-section,.architecture,.decision-section,.success-section{padding:6rem 0}.section-head{display:flex;justify-content:space-between;gap:3rem;align-items:end;margin-bottom:2rem}.section-head p{max-width:520px}.priority-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}.priority-grid article,.decision-grid article{border:1px solid #263e5c;background:rgba(12,27,48,.78);border-radius:20px;padding:1.3rem}.priority-grid article>span{font-size:.72rem;font-weight:900;color:#7dacff}.priority-grid h3,.decision-grid b{color:white;font-size:1.2rem}.priority-grid p{padding:0;color:#93a7c0;line-height:1.55}.timeline{border-left:1px solid #26486f;margin-left:35px}.phase-card{display:grid;grid-template-columns:120px 1fr;gap:2rem;padding:0 0 4rem 2rem;position:relative}.phase-card:before{content:"";position:absolute;width:13px;height:13px;background:#3478f6;border:4px solid #0a1b31;border-radius:50%;left:-7px;top:4px}.phase-card aside{display:flex;flex-direction:column}.phase-number{color:#fff;font-size:2.1rem;font-weight:900}.phase-window{color:#6f8bab;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em}.phase-content{border:1px solid #223c5b;border-radius:24px;background:#0b1b30;padding:2rem}.phase-content h3{font-size:1.75rem;color:white;margin:0}.phase-content .goal{color:#aabbd0;font-size:1.05rem;line-height:1.6}.phase-content ul{padding-left:1.2rem;margin:1.5rem 0 0}.phase-content li{color:#91a7c0;line-height:1.7;margin:.55rem 0}.architecture-flow{display:flex;align-items:center;gap:.7rem;overflow:auto;padding:1rem 0}.flow-node{min-width:190px;background:#0d213b;border:1px solid #2b4766;border-radius:18px;padding:1rem}.flow-node.accent{border-color:#3478f6;background:#102b50}.flow-node b{display:block;color:white}.flow-node span{font-size:.8rem;color:#90a6bf}.architecture-flow i{font-style:normal;color:#52769f}.flow-stack{display:grid;gap:.5rem}.decision-section{display:grid;grid-template-columns:.8fr 1.2fr;gap:3rem}.decision-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.decision-grid p{padding:0;margin-bottom:0}.success-section ol{list-style:none;padding:0;margin:2rem 0 0;display:grid}.success-section li{display:grid;grid-template-columns:80px 1fr;gap:1.5rem;padding:1.5rem 0;border-top:1px solid #1c3551}.success-section li>span{color:#54789f;font-size:1.4rem;font-weight:900}.success-section b{color:white;font-size:1.25rem}.success-section p{padding:0;margin:.3rem 0}.closing{padding:5rem;border-radius:30px;background:linear-gradient(135deg,#102d53,#0b1a30);border:1px solid #294b73;margin-bottom:3rem}.closing p{max-width:760px;font-size:1.08rem}.closing .primary{margin-top:1rem}@media(max-width:900px){.priority-grid{grid-template-columns:1fr 1fr}.decision-section,.thesis{grid-template-columns:1fr}.thesis-number{display:none}.section-head{display:block}.phase-card{grid-template-columns:80px 1fr;gap:1rem}.closing{padding:2rem}}@media(max-width:600px){.priority-grid,.decision-grid{grid-template-columns:1fr}.phase-card{grid-template-columns:1fr;padding-left:1.5rem}.phase-card aside{flex-direction:row;gap:1rem;align-items:center}.roadmap-page{padding-top:2rem}}
+</style>

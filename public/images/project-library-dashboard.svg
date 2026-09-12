@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">Kyle's Project Library dashboard</title>
+  <desc id="desc">Dashboard showing apps, websites, plugins, repositories, ZIP packages, PDF library, and missing insights.</desc>
+  <defs>
+    <linearGradient id="top" x1="0" x2="1"><stop stop-color="#071a31"/><stop offset="1" stop-color="#12365c"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="8" flood-opacity=".18"/></filter>
+    <style>
+      text{font-family:Inter,Arial,sans-serif}.t{fill:#142038}.s{fill:#607089}.w{fill:#fff}.b{font-weight:700}.xs{font-size:9px}.sm{font-size:11px}.md{font-size:14px}.lg{font-size:27px}
+    </style>
+  </defs>
+  <rect width="960" height="720" rx="20" fill="#f6f8fc"/>
+  <rect width="960" height="52" fill="url(#top)"/>
+  <text x="20" y="33" class="w b md">KM</text><text x="49" y="27" class="w b sm">Kyle Marshall</text><text x="49" y="40" fill="#9eb2cc" class="xs">Build · Create · Explore</text>
+  <rect x="230" y="13" width="465" height="28" rx="9" fill="#1b385a" stroke="#46627f"/><text x="250" y="31" fill="#9fb3c9" class="xs">⌕  Search projects, repos, PDFs, or keywords...</text>
+  <circle cx="795" cy="26" r="15" fill="#3478f6"/><text x="786" y="30" class="w b xs">KM</text>
+  <rect y="52" width="122" height="668" fill="#10243f"/>
+  <text x="18" y="82" class="w b xs">▦  Overview</text><text x="18" y="112" fill="#b8c7da" class="xs">▣  Apps</text><text x="18" y="142" fill="#b8c7da" class="xs">◎  Websites</text><text x="18" y="172" fill="#b8c7da" class="xs">⌁  Plugins &amp; Tools</text><text x="18" y="202" fill="#b8c7da" class="xs">◉  Repos</text><text x="18" y="232" fill="#b8c7da" class="xs">▤  ZIPs / Backlog</text><text x="18" y="262" fill="#b8c7da" class="xs">▧  PDF Library</text><text x="18" y="292" fill="#b8c7da" class="xs">⌁  Insights</text>
+  <text x="143" y="93" class="t b lg">Kyle's Project Library</text><text x="143" y="112" class="s sm">Apps, websites, repos, plugins, zips, and PDFs organized from my chats.</text>
+  <g transform="translate(143 126)"><rect width="42" height="22" rx="11" fill="#3478f6"/><text x="15" y="15" class="w b xs">All</text><g fill="#fff" stroke="#dfe5ef"><rect x="48" width="46" height="22" rx="11"/><rect x="100" width="58" height="22" rx="11"/><rect x="164" width="52" height="22" rx="11"/><rect x="222" width="44" height="22" rx="11"/><rect x="272" width="42" height="22" rx="11"/><rect x="320" width="42" height="22" rx="11"/></g><g class="t xs"><text x="59" y="15">Apps</text><text x="111" y="15">Websites</text><text x="176" y="15">Plugins</text><text x="233" y="15">Repos</text><text x="282" y="15">ZIPs</text><text x="329" y="15">PDFs</text></g></g>
+  <g transform="translate(143 163)"><rect width="797" height="143" rx="12" fill="#e6f0ff"/><text x="15" y="24" fill="#2772dc" class="b sm">▣  Apps &amp; Product Concepts</text>
+    <g transform="translate(14 36)">
+      <g filter="url(#shadow)"><rect width="120" height="92" rx="8" fill="#fff"/><rect width="120" height="46" rx="8" fill="#13243e"/><text x="8" y="60" class="t b xs">BrainstormingApp</text><text x="8" y="74" class="s xs">Connected ideas &amp; ribbons</text></g>
+      <g transform="translate(130)" filter="url(#shadow)"><rect width="120" height="92" rx="8" fill="#fff"/><rect width="120" height="46" rx="8" fill="#142b49"/><text x="8" y="60" class="t b xs">PostLaunchApp</text><text x="8" y="74" class="s xs">Launch + monitoring</text></g>
+      <g transform="translate(260)" filter="url(#shadow)"><rect width="120" height="92" rx="8" fill="#fff"/><rect width="120" height="46" rx="8" fill="#263b55"/><text x="8" y="60" class="t b xs">PDF Reader</text><text x="8" y="74" class="s xs">Docs → actions</text></g>
+      <g transform="translate(390)" filter="url(#shadow)"><rect width="120" height="92" rx="8" fill="#fff"/><rect width="120" height="46" rx="8" fill="#37526e"/><text x="8" y="60" class="t b xs">Smart Image Slicer</text><text x="8" y="74" class="s xs">Asset utility</text></g>
+      <g transform="translate(520)" filter="url(#shadow)"><rect width="120" height="92" rx="8" fill="#fff"/><rect width="120" height="46" rx="8" fill="#13243e"/><text x="8" y="60" class="t b xs">Local Prompts</text><text x="8" y="74" class="s xs">Offline workflow</text></g>
+      <g transform="translate(650)" filter="url(#shadow)"><rect width="120" height="92" rx="8" fill="#fff"/><rect width="120" height="46" rx="8" fill="#1b3450"/><text x="8" y="60" class="t b xs">AstroFlow</text><text x="8" y="74" class="s xs">Market intelligence</text></g>
+    </g>
+  </g>
+  <g transform="translate(143 318)"><rect width="797" height="143" rx="12" fill="#e5f8f2"/><text x="15" y="24" fill="#15916f" class="b sm">▣  Websites &amp; Themes</text>
+    <g transform="translate(14 36)">
+      <g filter="url(#shadow)"><rect width="120" height="92" rx="8" fill="#fff"/><rect width="120" height="46" rx="8" fill="#0c223d"/><text x="8" y="60" class="t b xs">Blue Brothers Designs</text><text x="8" y="74" class="s xs">Studio platform</text></g>
+      <g transform="translate(130)" filter="url(#shadow)"><rect width="120" height="92" rx="8" fill="#fff"/><rect width="120" height="46" rx="8" fill="#183452"/><text x="8" y="60" class="t b xs">AI Portfolio Site</text><text x="8" y="74" class="s xs">Search + projects</text></g>
+      <g transform="translate(260)" filter="url(#shadow)"><rect width="120" height="92" rx="8" fill="#fff"/><rect width="120" height="46" rx="8" fill="#30455f"/><text x="8" y="60" class="t b xs">BBD Studio Theme</text><text x="8" y="74" class="s xs">WordPress</text></g>
+      <g transform="translate(390)" filter="url(#shadow)"><rect width="120" height="92" rx="8" fill="#fff"/><rect width="120" height="46" rx="8" fill="#173555"/><text x="8" y="60" class="t b xs">NASA Modernization</text><text x="8" y="74" class="s xs">Astro + legacy</text></g>
+      <g transform="translate(520)" filter="url(#shadow)"><rect width="120" height="92" rx="8" fill="#fff"/><rect width="120" height="46" rx="8" fill="#587087"/><text x="8" y="60" class="t b xs">AstroFlow Themes</text><text x="8" y="74" class="s xs">Reusable designs</text></g>
+      <g transform="translate(650)" filter="url(#shadow)"><rect width="120" height="92" rx="8" fill="#fff"/><rect width="120" height="46" rx="8" fill="#4a6074"/><text x="8" y="60" class="t b xs">ClearShot Redesign</text><text x="8" y="74" class="s xs">Photography</text></g>
+    </g>
+  </g>
+  <g transform="translate(143 474)"><rect width="500" height="112" rx="12" fill="#eee7ff"/><text x="15" y="23" fill="#7554df" class="b sm">⌁  Plugins &amp; Tools</text><g transform="translate(14 36)" fill="#fff" stroke="#ddd6f5"><rect width="108" height="58" rx="7"/><rect x="118" width="108" height="58" rx="7"/><rect x="236" width="108" height="58" rx="7"/><rect x="354" width="108" height="58" rx="7"/></g><g class="t xs"><text x="24" y="71">Site Intelligence</text><text x="142" y="71">Content Modernizer</text><text x="260" y="71">Components Pro</text><text x="378" y="71">Auto-Rig Helper</text></g></g>
+  <g transform="translate(654 474)"><rect width="286" height="112" rx="12" fill="#ffe7e7"/><text x="15" y="23" fill="#d94f5e" class="b sm">◉  Repos</text><g class="t xs"><text x="17" y="46">kmarshall95/brainstormingApp</text><text x="17" y="64">kmarshall95/postLaunchApp</text><text x="17" y="82">kmarshall95/PDF-reader</text><text x="17" y="100">kmarshall95/Unreal_sixfold</text></g></g>
+  <g transform="translate(143 598)"><rect width="250" height="102" rx="12" fill="#fff0d5"/><text x="15" y="23" fill="#d89013" class="b sm">▤  ZIP Packages</text><text x="15" y="46" class="t xs">AI Portfolio Site</text><text x="15" y="64" class="t xs">AstroFlow themes</text><text x="15" y="82" class="t xs">BBD delivery package</text></g>
+  <g transform="translate(404 598)"><rect width="260" height="102" rx="12" fill="#e7efff"/><text x="15" y="23" fill="#3973db" class="b sm">▧  PDF Library</text><text x="15" y="46" class="t xs">DA SIX Production Bible</text><text x="15" y="64" class="t xs">Combat Formations Manual</text><text x="15" y="82" class="t xs">Meshy Auto-Rig Guide</text></g>
+  <g transform="translate(675 598)"><rect width="265" height="102" rx="12" fill="#e2f7e9"/><text x="15" y="23" fill="#27975e" class="b sm">✓  Missing Insights</text><text x="15" y="46" class="t xs">Project status model</text><text x="15" y="64" class="t xs">Artifact relationships</text><text x="15" y="82" class="t xs">Maintenance ownership</text></g>
+</svg>
