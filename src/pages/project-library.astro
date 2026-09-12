@@ -1,0 +1,124 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const projects = [
+  { name: "BrainstormingApp", type: "Creative Tool", status: "Active", description: "A fast visual workspace for connecting ideas, images, tasks, and references with semantic ribbons.", stack: ["Browser", "IndexedDB", "UX"] },
+  { name: "PostLaunchApp", type: "Product / DevOps", status: "Active", description: "Launch-readiness tracking that grows into monitoring, maintenance, alerts, and operational ownership after release.", stack: ["Monitoring", "GitHub", "Automation"] },
+  { name: "PDF Reader", type: "Productivity", status: "Prototype", description: "An action-oriented PDF workspace that turns documents into tasks, notes, reminders, and linked project context.", stack: ["PDF", "Canvas", "Knowledge"] },
+  { name: "AstroFlow", type: "Platform", status: "Private", description: "A reusable web platform for market intelligence, site generation, themes, content systems, and business tooling.", stack: ["Astro", "Automation", "Research"] },
+  { name: "DA SIX", type: "Game / R&D", status: "Prototype", description: "A third-person action project combining fighting-game decisions, exploration, six radically different heroes, and a growing production pipeline.", stack: ["Unreal", "Blender", "Game Design"] },
+  { name: "Meshly Models", type: "3D Pipeline", status: "Active", description: "A structured asset library for Meshy characters, rigs, animations, Blender QA, and Unreal-ready character production.", stack: ["3D", "Rigging", "UE5"] },
+];
+
+const repoGroups = [
+  { title: "Products", items: ["brainstormingApp", "postLaunchApp", "PDF-reader", "AstroFlow", "promptChatBranch"] },
+  { title: "Game Development", items: ["Unreal_sixfold", "Meshly_models", "da-six-game-app-source", "game-character-builder"] },
+  { title: "Web / Studio", items: ["blue-brothers-premium-v2", "bbdsite", "bbd-react-theme", "astroResume"] },
+];
+---
+
+<BaseLayout title="Project Library | Kyle Marshall">
+  <main class="library-page">
+    <section class="library-hero shell">
+      <div>
+        <span class="eyebrow">PROJECT OPERATING SYSTEM</span>
+        <h1>One place for the things I build.</h1>
+        <p class="lede">Apps, websites, plugins, game systems, repositories, PDFs, packages, and the missing work between an idea and something that is actually shipped.</p>
+        <div class="hero-actions">
+          <a class="primary-action" href="#projects">Explore projects</a>
+          <a class="secondary-action" href="/next-steps">Read the roadmap →</a>
+        </div>
+      </div>
+      <div class="hero-stat-grid" aria-label="Project library categories">
+        <div><strong>Apps</strong><span>Product ideas becoming reusable tools</span></div>
+        <div><strong>Web</strong><span>Portfolio, Astro, WordPress, modernization</span></div>
+        <div><strong>Game</strong><span>DA SIX, Unreal, characters, combat systems</span></div>
+        <div><strong>Artifacts</strong><span>Repos, ZIPs, PDFs, screenshots, docs</span></div>
+      </div>
+    </section>
+
+    <section class="shell dashboard-section">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">THE LIBRARY VIEW</span>
+          <h2>A project should own its artifacts.</h2>
+        </div>
+        <p>The goal is not another folder of links. Each project becomes the parent record for its repo, demo, screenshots, ZIPs, PDFs, decisions, launch state, maintenance state, and next action.</p>
+      </div>
+      <div class="dashboard-mock" role="img" aria-label="Project library dashboard preview">
+        <div class="mock-sidebar">
+          <span class="mock-logo">KM</span><b>Overview</b><span>Apps</span><span>Websites</span><span>Plugins</span><span>Repos</span><span>ZIPs</span><span>PDFs</span><span>Insights</span>
+        </div>
+        <div class="mock-main">
+          <div class="mock-title"><span><b>Kyle's Project Library</b><small>Apps, sites, repos, packages and PDFs</small></span><i></i></div>
+          <div class="mock-tabs"><b>All</b><span>Apps</span><span>Websites</span><span>Plugins</span><span>Repos</span><span>PDFs</span></div>
+          <div class="mock-strip blue"><strong>Apps & Product Concepts</strong><div class="mock-cards"><i></i><i></i><i></i><i></i></div></div>
+          <div class="mock-strip green"><strong>Websites & Themes</strong><div class="mock-cards"><i></i><i></i><i></i><i></i></div></div>
+          <div class="mock-bottom"><div class="mock-panel purple"><strong>Plugins & Tools</strong></div><div class="mock-panel coral"><strong>Repos</strong></div><div class="mock-panel amber"><strong>ZIPs</strong></div><div class="mock-panel mint"><strong>Missing Insights</strong></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="shell section-block">
+      <div class="section-heading">
+        <div><span class="eyebrow">CURRENT SYSTEMS</span><h2>What I am building now</h2></div>
+        <p>These projects are different on purpose, but they increasingly share the same idea: turn messy creative or technical work into something structured, inspectable, and easier to continue.</p>
+      </div>
+      <div class="project-grid">
+        {projects.map((project) => (
+          <article class="project-card">
+            <div class="card-top"><span>{project.type}</span><em>{project.status}</em></div>
+            <h3>{project.name}</h3>
+            <p>{project.description}</p>
+            <div class="tags">{project.stack.map((tag) => <span>{tag}</span>)}</div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="shell section-block split-section">
+      <div>
+        <span class="eyebrow">REPOSITORIES</span>
+        <h2>The code is only one layer.</h2>
+        <p>A repository tells you what exists. The Project Library should also tell you why it exists, whether it runs, what blocks it, what documentation belongs to it, and what happens after launch.</p>
+      </div>
+      <div class="repo-groups">
+        {repoGroups.map((group) => (
+          <div class="repo-group">
+            <strong>{group.title}</strong>
+            {group.items.map((item) => <span>{item}</span>)}
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="shell section-block artifact-section">
+      <div class="section-heading">
+        <div><span class="eyebrow">ARTIFACT MODEL</span><h2>Repos, ZIPs and PDFs stop being separate piles.</h2></div>
+      </div>
+      <div class="artifact-flow">
+        <div><b>Idea</b><span>Research, sketches, chats</span></div><i>→</i>
+        <div><b>Project</b><span>Canonical project record</span></div><i>→</i>
+        <div><b>Build</b><span>Repo, screenshots, packages</span></div><i>→</i>
+        <div><b>Launch</b><span>Checklist and release</span></div><i>→</i>
+        <div><b>Operate</b><span>Monitoring and maintenance</span></div>
+      </div>
+      <div class="artifact-grid">
+        <article><h3>PDF Library</h3><p>Game production bibles, Meshy/Blender workflows, app plans, research, case studies, and checklists linked back to the work they support.</p></article>
+        <article><h3>Package Library</h3><p>ZIPs become versioned releases with a README, setup instructions, screenshots, dependencies, known issues, and a source repo.</p></article>
+        <article><h3>Missing Artifact Engine</h3><p>Detect projects with no screenshot, no package, no README, no monitor, no next action, or no recent verification.</p></article>
+      </div>
+    </section>
+
+    <section class="shell next-banner">
+      <span class="eyebrow">WHAT HAPPENS NEXT</span>
+      <h2>The next step is to make the library operational, not just visual.</h2>
+      <p>A shared project schema, live GitHub ingestion, artifact relationships, status, blockers, screenshots, launch checks, and post-launch monitoring turn this page into the front door to the entire body of work.</p>
+      <a class="primary-action" href="/next-steps">Open the full next-steps plan →</a>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  :global(body){background:#071227;color:#dbe6f7}.library-page{background:radial-gradient(circle at 75% 0%,#173d70 0,transparent 32%),#071227;min-height:100vh;padding:5rem 0}.shell{width:min(1180px,calc(100% - 2rem));margin:0 auto}.library-hero{display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:end;padding:4rem 0 5rem}.eyebrow{display:inline-block;color:#75a8ff;font-size:.78rem;font-weight:800;letter-spacing:.16em;margin-bottom:1rem}.library-hero h1,.section-heading h2,.split-section h2,.next-banner h2{color:white;letter-spacing:-.045em;margin:0}.library-hero h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.92;max-width:850px}.lede{font-size:1.25rem;line-height:1.65;max-width:760px;color:#aebdd1}.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}.primary-action,.secondary-action{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:999px;padding:.9rem 1.25rem;font-weight:750}.primary-action{background:#3478f6;color:white}.secondary-action{border:1px solid #435773;color:#dbe6f7}.hero-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}.hero-stat-grid div,.project-card,.artifact-grid article,.repo-group{background:rgba(12,28,53,.78);border:1px solid #243c61;border-radius:20px;padding:1.3rem}.hero-stat-grid strong{color:white;display:block;font-size:1.05rem}.hero-stat-grid span{font-size:.88rem;color:#91a4bf}.section-block,.dashboard-section{padding:3rem 0 5rem}.section-heading{display:flex;justify-content:space-between;gap:3rem;align-items:end;margin-bottom:2rem}.section-heading h2,.split-section h2,.next-banner h2{font-size:clamp(2rem,4vw,3.5rem);line-height:1}.section-heading>p,.split-section>div>p,.next-banner p{max-width:560px;color:#9eb0c8;line-height:1.7}.dashboard-mock{display:grid;grid-template-columns:160px 1fr;min-height:560px;background:#f7f9fc;color:#13213a;border-radius:24px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.12)}.mock-sidebar{background:#10243f;color:#b7c8df;display:flex;flex-direction:column;gap:1.05rem;padding:1.2rem}.mock-sidebar b{color:white}.mock-logo{color:white;font-size:1.4rem;font-weight:900;margin-bottom:.5rem}.mock-main{padding:1.4rem}.mock-title{display:flex;justify-content:space-between}.mock-title b{font-size:1.55rem}.mock-title small{display:block;color:#7a879c}.mock-title i{width:30%;height:14px;background:#e2e8f2;border-radius:99px}.mock-tabs{display:flex;gap:.5rem;margin:1rem 0}.mock-tabs span,.mock-tabs b{font-style:normal;font-size:.72rem;padding:.35rem .7rem;border-radius:99px;background:#edf1f7}.mock-tabs b{background:#3478f6;color:white}.mock-strip{padding:1rem;border-radius:14px;margin:.7rem 0}.mock-strip.blue{background:#e7f0ff}.mock-strip.green{background:#e2f8f0}.mock-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;margin-top:.7rem}.mock-cards i{display:block;height:105px;background:linear-gradient(#13233e 52%,#fff 52%);border-radius:8px;box-shadow:0 2px 8px #cbd3df}.mock-bottom{display:grid;grid-template-columns:2fr 1fr;gap:.7rem;margin-top:.7rem}.mock-panel{min-height:105px;border-radius:12px;padding:1rem}.purple{background:#eee6ff}.coral{background:#ffe8e8}.amber{background:#fff2d6}.mint{background:#def8e9}.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.project-card h3{color:white;font-size:1.5rem;margin:.85rem 0}.project-card p{color:#9eb0c8;line-height:1.6;padding:0}.card-top{display:flex;justify-content:space-between}.card-top span,.card-top em{font-size:.75rem;font-style:normal;font-weight:800;color:#75a8ff}.card-top em{color:#78d4a5}.tags{display:flex;gap:.45rem;flex-wrap:wrap;margin-top:1.2rem}.tags span{font-size:.72rem;background:#132b4d;padding:.35rem .55rem;border-radius:99px;color:#adc9ef}.split-section{display:grid;grid-template-columns:1fr 1fr;gap:3rem}.repo-groups{display:grid;gap:.8rem}.repo-group{display:grid;grid-template-columns:150px repeat(2,1fr);gap:.7rem;align-items:center}.repo-group strong{color:white}.repo-group span{font-family:ui-monospace,monospace;font-size:.78rem;color:#9eb0c8}.artifact-flow{display:flex;align-items:center;gap:.65rem;overflow:auto;padding-bottom:1rem}.artifact-flow div{min-width:170px;border:1px solid #2f4767;border-radius:16px;padding:1rem;background:#0e203b}.artifact-flow b{display:block;color:white}.artifact-flow span{font-size:.78rem;color:#91a4bf}.artifact-flow i{font-style:normal;color:#50709c}.artifact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}.artifact-grid h3{color:white}.artifact-grid p{color:#9eb0c8;padding:0;line-height:1.6}.next-banner{margin-top:2rem;padding:4rem;border:1px solid #2d4d7a;border-radius:28px;background:linear-gradient(135deg,#0f2c53,#0b1d38)}.next-banner .primary-action{margin-top:1rem}@media(max-width:850px){.library-hero,.split-section{grid-template-columns:1fr}.project-grid,.artifact-grid{grid-template-columns:1fr}.dashboard-mock{grid-template-columns:1fr}.mock-sidebar{display:none}.mock-cards{grid-template-columns:1fr 1fr}.section-heading{display:block}.repo-group{grid-template-columns:1fr}.next-banner{padding:2rem}.hero-stat-grid{grid-template-columns:1fr}}
+</style>
